@@ -31,25 +31,15 @@ const canvas = document.querySelector('#confetti');
 const jsConfetti = new JSConfetti();
 
 button.addEventListener('click', () => {
-  jsConfetti.addConfetti({
-    emojis: ['😈', '⚡️', '💥', '✨', '🥇', '🐒'],
-    confettiNumber: 65,
-  });
-  // .then(() => jsConfetti.addConfetti());
-
-  console.log('button');
-});
-
-button.addEventListener('click', () => {
-  if (button.innerHTML === 'Followed') {
+  if (button.innerHTML === 'Following') {
     button.innerHTML = 'Follow';
     button.style.backgroundColor = '';
+  } else {
+    button.innerHTML = 'Following';
+    button.style.backgroundColor = '#262626';
     jsConfetti.addConfetti({
-      emojis: ['😔', '🥲', '🤨', '😪', '☠️', '🐒'],
+      emojis: ['😈', '⚡️', '💥', '✨', '🥇', '🐒'],
       confettiNumber: 65,
     });
-  } else {
-    button.innerHTML = 'Followed';
-    button.style.backgroundColor = '#262626';
   }
 });
