@@ -23,3 +23,33 @@ function fetchData() {
 }
 
 fetchData();
+
+// confetti
+const button = document.querySelector('#button');
+const canvas = document.querySelector('#confetti');
+
+const jsConfetti = new JSConfetti();
+
+button.addEventListener('click', () => {
+  jsConfetti.addConfetti({
+    emojis: ['😈', '⚡️', '💥', '✨', '🥇', '🐒'],
+    confettiNumber: 65,
+  });
+  // .then(() => jsConfetti.addConfetti());
+
+  console.log('button');
+});
+
+button.addEventListener('click', () => {
+  if (button.innerHTML === 'Followed') {
+    button.innerHTML = 'Follow';
+    button.style.backgroundColor = '';
+    jsConfetti.addConfetti({
+      emojis: ['😔', '🥲', '🤨', '😪', '☠️', '🐒'],
+      confettiNumber: 65,
+    });
+  } else {
+    button.innerHTML = 'Followed';
+    button.style.backgroundColor = '#262626';
+  }
+});

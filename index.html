@@ -12,10 +12,17 @@
     />
     <link rel="stylesheet" href="src/styles/reset.css" />
     <link rel="stylesheet" href="src/styles/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"
+      defer
+    ></script>
     <script src="src/js/script.js" defer></script>
+
     <title>First Wongsrila</title>
   </head>
   <body>
+    <canvas id="confetti"></canvas>
+
     <div class="page-wrapper">
       <header>
         <h1 class="myName"></h1>
@@ -48,11 +55,23 @@
           ></a>
         </section>
         <section class="interaction_wrapper">
-          <button class="btn">Follow</button>
+          <button id="button" class="btn">Follow</button>
           <button class="btn">Message</button>
         </section>
         <section class="content_wrapper">
           <div class="content-grid">
+            <div class="grid-item">
+              <img src="src/images/profiel-foto.png" alt="" />
+            </div>
+            <div class="grid-item">
+              <img src="src/images/profiel-foto.png" alt="" />
+            </div>
+            <div class="grid-item">
+              <img src="src/images/profiel-foto.png" alt="" />
+            </div>
+            <div class="grid-item">
+              <img src="src/images/profiel-foto.png" alt="" />
+            </div>
             <div class="grid-item">
               <img src="src/images/profiel-foto.png" alt="" />
             </div>
