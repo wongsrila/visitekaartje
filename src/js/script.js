@@ -1,10 +1,17 @@
 // variables
 const isName = document.querySelector('.myName');
+const profileName = document.querySelector('.profile_name');
+const profileBio = document.querySelector('.profile_bio');
+const linkInBio = document.querySelector('.link-in-bio');
+const pf = document.querySelector('.pf_wrapper');
 
 // functions
 function getData(data) {
-  console.log(data.member.name);
-  isName.innerHTML = `${data.member.name}.`;
+  isName.innerHTML = `${data.member.name}`;
+  profileName.innerHTML = `${data.member.nickname}`;
+  profileBio.innerHTML = `${data.member.bio.html}`;
+  linkInBio.innerHTML = `${data.member.website}`;
+  pf.innerHTML = `<img src="${data.member.avatar}" alt="profile picture" />`;
 }
 
 function fetchData() {
